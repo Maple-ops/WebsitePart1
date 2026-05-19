@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Girlfriend</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <h1 style="color: rgb(0, 0, 0); 
+        font-family: times new roman;
+            text-align: center;
+                font-size: 60px;">To My Girlfriend</h1>
+    <p>To Emily,
+        <br>
+        Not only are you the most beautiful woman in the world to me, but your awesomness knows no bounds.
+        <br>
+        I love every second we spend together, whether it's as simple as watching a movie, or as random as going on a sporadic drive down a random road.
+        <br>
+            You mean the absolute world to me and I cannot express how much I love you in words...
+        <style>
+            p {
+                color: rgba(0, 0, 0, 0.658);
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 20px;
+                text-align: center;
+                
+            }
+        </style>
+    </p>
+
+    <h1> 
+        <style>
+            h1 {
+                color: rgb(0, 0, 0);
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                font-size: 40px;
+            }
+        </style>
+        Happy Anniversary!</h1>
+    <br>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        
+        <button onclick="celebrate()">Celebrate! (If you feel so inclined)</button>
+
+        <script>
+            function celebrate() {
+                confetti({
+                    particleCount: 300,
+                    spread: 2000,
+                    origin: { y: 0.4 },
+                    shapes: ['hearts', 'star', 'square','circle'],
+                    colors: ['#ff0000', '#ffc0cb']
+                });
+            }
+        </script>
+    <br>    
+
+        <img src="Project101.webp" alt="Stylized red heart with glossy white highlights and a thick black outline, slightly tilted; no text present; plain white background; conveys a playful, affectionate tone" 
+            style="width: 300px; height: auto; display: block; margin: 0 auto;">
+    <textarea id="feedback" style="font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);" placeholder="I'm waiting...."></textarea>
+        <img src = "Project102.webp" alt="Sunflower boquet" 
+            style="width: 300px; height: auto; display: block; margin: 0 auto;">
+   
+    <br>
+    <button onclick="Message1()">Say Something</button>
+   
+    <p id="output"></p>
+   <script>
+        function Message1() {
+            var feedback = document.getElementById("feedback").value;   
+            if (feedback.toLowerCase().includes("i love you")) {
+                document.getElementById("output").innerText = feedback + "\n\nI love you too <3";
+            }
+            else {
+                document.getElementById("output").innerText = feedback;
+        }
+        if (feedback.toLowerCase().includes("gay")) {
+                document.getElementById("output").innerText = feedback + "\n\n No, I'm not.";
+            }
+        }   
+    </script>
+    <button onclick="Message2()">Click on me!</button>
+    <script>
+        function Message2() {
+            document.getElementById("output").innerText = "\n\n You're the best <3";
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <button onclick="Message3()">Now click on me!</button>
+    <script>
+        function Message3() {
+            document.getElementById("output").innerText = "\n\n You mean the absolute world to me! ";
+        }
+    </script>
+    </body>
+</html>
