@@ -50,7 +50,7 @@
                 confetti({
                     particleCount: 300,
                     spread: 2000,
-                    origin: { y: 0.4 },
+                    origin: { y: 0.35 },
                     shapes: ['hearts', 'star', 'square','circle'],
                     colors: ['#ff0000', '#ffc0cb']
                 });
@@ -60,7 +60,7 @@
 
         <img src="Project101.webp" alt="Stylized red heart with glossy white highlights and a thick black outline, slightly tilted; no text present; plain white background; conveys a playful, affectionate tone" 
             style="width: 300px; height: auto; display: block; margin: 0 auto;">
-    <textarea id="feedback" style="font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);" placeholder="I'm waiting...."></textarea>
+    <textarea id="feedback" style="font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658); width: 300px; height: 40px" placeholder="I'm waiting.... You have to click on say something btw"></textarea>
         <img src = "Project102.webp" alt="Sunflower boquet" 
             style="width: 300px; height: auto; display: block; margin: 0 auto;">
    
@@ -95,6 +95,16 @@
     <script>
         function Message3() {
             document.getElementById("output").innerText = "\n\n You mean the absolute world to me! ";
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <button onclick="Message4()">Pictures!</button>
+    <script>
+        function Message4() {
+            document.getElementById("output").innerHTML = '<img src="2026-01-08T20-54-48-072.jpg" alt="Picture" style="width: 300px; height: auto;">' + 
+            "<br>This was us playing party animals lol.";
         }
     </script>
     </body>
