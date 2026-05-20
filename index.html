@@ -41,12 +41,12 @@
         </style>
         Happy Anniversary!</h1>
     <br>
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
         
-        <button onclick="celebrate()">Celebrate! (If you feel so inclined)</button>
+        <button onclick="celebrate1()">Celebrate! (If you feel so inclined)</button>
 
         <script>
-            function celebrate() {
+            function celebrate1() {
                 confetti({
                     particleCount: 300,
                     spread: 2000,
@@ -61,10 +61,7 @@
         <img src="Project101.webp" alt="Stylized red heart with glossy white highlights and a thick black outline, slightly tilted; no text present; plain white background; conveys a playful, affectionate tone" 
             style="width: 300px; height: auto; display: block; margin: 0 auto;">
     <textarea id="feedback" style="font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658); width: 300px; height: 40px" placeholder="I'm waiting.... You have to click on say something btw"></textarea>
-        <img src = "Project102.webp" alt="Sunflower boquet" 
-            style="width: 300px; height: auto; display: block; margin: 0 auto;">
-   
-    <br>
+         <br>
     <button onclick="Message1()">Say Something</button>
    
     <p id="output"></p>
@@ -80,12 +77,38 @@
         if (feedback.toLowerCase().includes("gay")) {
                 document.getElementById("output").innerText = feedback + "\n\n No, I'm not.";
             }
-        }   
-    </script>
+        }
+    </script>   
+        
+        <br>
+        <br>    
+         <button onclick="celebrate2()">Sun Flower 🌻</button>
+
+        <script>
+                function celebrate2() {
+
+                const sunflower = confetti.shapeFromText({
+                    text: '🌻',
+                    font: '40px Arial',
+                });
+                confetti({
+                    particleCount: 300,
+                    spread: 2000,
+                    origin: { y: 0.7},
+                    startVelocity: 30,
+                    shapes: [sunflower],
+                    colors: ['#ffd700', '#8b4513', '#ffa500'],
+                    scalar : 1,
+                    gravity: 0.5,
+                });
+            }
+        </script>
+    <img src = "Project102.webp" alt="Sunflower boquet" 
+            style="width: 300px; height: auto; display: block; margin: 0 auto;">
     <button onclick="Message2()">Click on me!</button>
     <script>
         function Message2() {
-            document.getElementById("output").innerText = "\n\n You're the best <3";
+            document.getElementById("secondOutput").innerText = "\n\n You're the best <3";
         }
     </script>
     <br>
@@ -94,8 +117,11 @@
     <button onclick="Message3()">Now click on me!</button>
     <script>
         function Message3() {
-            document.getElementById("output").innerText = "\n\n You mean the absolute world to me! ";
+            document.getElementById("secondOutput").innerText = "\n\n You mean the absolute world to me! ";
         }
+    </script>
+    <br>
+     <div id="secondOutput" style="text-align: center; font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);"></div>  
     </script>
     <br>
     <br>
@@ -103,9 +129,11 @@
     <button onclick="Message4()">Pictures!</button>
     <script>
         function Message4() {
-            document.getElementById("output").innerHTML = '<img src="2026-01-08T20-54-48-072.jpg" alt="Picture" style="width: 300px; height: auto;">' + 
+            document.getElementById("pictureOutput").innerHTML = '<img src="2026-01-08T20-54-48-072.jpg" alt="Picture" style="width: 300px; height: auto;" display="block; margin: 0 auto;">' + 
             "<br>This was us playing party animals lol.";
         }
     </script>
+    <br>
+    <div id="pictureOutput" style="text-align: center; font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);"></div>
     </body>
 </html>
