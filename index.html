@@ -18,7 +18,7 @@
         <br>
         I love every second we spend together, whether it's as simple as watching a movie, or as random as going on a sporadic drive down a random road.
         <br>
-            You mean the absolute world to me and I cannot express how much I love you in words...
+            You mean the absolute world to me and I cannot express enough how much I truly love you.
         <style>
             p {
                 color: rgba(0, 0, 0, 0.658);
@@ -77,6 +77,9 @@
         if (feedback.toLowerCase().includes("gay")) {
                 document.getElementById("output").innerText = feedback + "\n\n No, I'm not.";
             }
+        if(feedback.toLowerCase().includes("hello") || feedback.toLowerCase().includes("hi") || feedback.toLowerCase().includes("hey")) {
+                document.getElementById("output").innerText = feedback + "\n\n Hey beautiful, I miss you :)";
+            }
         }
     </script>   
         
@@ -122,18 +125,51 @@
     </script>
     <br>
      <div id="secondOutput" style="text-align: center; font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);"></div>  
-    </script>
     <br>
     <br>
     <br>
     <button onclick="Message4()">Pictures!</button>
     <script>
         function Message4() {
-            document.getElementById("pictureOutput").innerHTML = '<img src="2026-01-08T20-54-48-072.jpg" alt="Picture" style="width: 300px; height: auto;" display="block; margin: 0 auto;">' + 
+            document.getElementById("pictureOutput").innerHTML = '<img src="2026-01-08T20-54-48-072.jpg" alt="Picture" style="width: 300px; height: auto; display: block; margin: 0 auto;">' + 
             "<br>This was us playing party animals lol.";
         }
     </script>
     <br>
     <div id="pictureOutput" style="text-align: center; font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);"></div>
-    </body>
-</html>
+    <br>
+    <button onclick="showJoke()">Click on me for a joke! <br> There's only 5 jokes right now :) </button>
+
+<div id="jokeOutput" style="text-align: center; font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);"></div>
+<div id="clickCount" style="text-align: center; font-family: 'Times New Roman', Times, serif; color: rgba(0, 0, 0, 0.658);"></div>
+
+<script>
+    let clicks = 0;
+
+    const jokes = [
+        "Where do cars go to cool off? The car pool lane! 😂",
+        "Why did the scarecrow win an award? Because he was outstanding in his field! 😂",
+        "Why don't scientists trust atoms? Because they make up everything! 😂",
+        "Why did the math book look sad? Because it had too many problems! 😂",
+        "What do you call fake spaghetti? An impasta! 😂"
+    ];
+
+    function showJoke() {
+    clicks++;
+
+    if (clicks === 30) {
+        document.getElementById("jokeOutput").innerHTML =
+            "Are you spamming ;) <br> I'm kidding, I'll keep adding more jokes :)";
+    } else {
+        let jokeIndex = (clicks - 1) % jokes.length;
+
+        document.getElementById("jokeOutput").innerHTML =
+            "<br><br>" + jokes[jokeIndex];
+    }
+
+    document.getElementById("clickCount").innerHTML =
+        "Clicks: " + clicks;
+}
+</script>
+</body>
+</html>     
